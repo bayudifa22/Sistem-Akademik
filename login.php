@@ -22,11 +22,10 @@ if (isset($_POST['login'])) {
         if ($data['level'] == 'admin') {
              $redirect = "admin/dashboard.php";
         } elseif ($data['level'] == 'dosen') {
-             $redirect = "dosen/dashboard.php";
+             $redirect = "dosen/index.php";
         } elseif ($data['level'] == 'mahasiswa') {
             $redirect = "mahasiswa/index.php";
         }
-        exit;
     } else {
         $pesan = "Username atau Password salah!";
     }
@@ -44,11 +43,14 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { 
+            height: 100vh; 
+            background-color: #007bff; /* Warna biru */ 
+        }
+        .login-wrapper {
+            height: 100vh;
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            height: 100vh; 
-            background-color: #007bff; /* Warna biru */ 
         }
         .login-container {
             background: white;
@@ -68,6 +70,7 @@ if (isset($_POST['login'])) {
     </style>
 </head>
 <body>
+<div class="login-wrapper">
     <div class="login-container">
         <!-- <i class="fa-solid fa-graduation-cap"></i> -->
         <i class="fa-solid fa-graduation-cap" style="font-size: 100px; color: #007bff;"></i>
@@ -90,7 +93,9 @@ if (isset($_POST['login'])) {
         </form>
         <p class="text-center mt-3">Belum punya akun? <a href="register.php">Daftar disini</a></p>
     </div>
+</div>
     <script src="../assets/js/script.js"></script>
+     <!-- sweet alert / pop up Login -->
 <script>
     Swal.fire({
         icon: 'success',
