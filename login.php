@@ -20,11 +20,11 @@ if (isset($_POST['login'])) {
         $_SESSION['level']    = $data['level'];
 
         if ($data['level'] == 'admin') {
-            header("Location: admin/dashboard.php");
+             $redirect = "admin/dashboard.php";
         } elseif ($data['level'] == 'dosen') {
-            header("Location: dosen/index.php");
+             $redirect = "dosen/dashboard.php";
         } elseif ($data['level'] == 'mahasiswa') {
-            header("Location: mahasiswa/index.php");
+            $redirect = "mahasiswa/index.php";
         }
         exit;
     } else {
@@ -40,6 +40,7 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { 
@@ -89,5 +90,17 @@ if (isset($_POST['login'])) {
         </form>
         <p class="text-center mt-3">Belum punya akun? <a href="register.php">Daftar disini</a></p>
     </div>
+    <script src="../assets/js/script.js"></script>
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Login Berhasil!',
+        text: 'Selamat datang <?= $_SESSION['username']; ?>',
+        timer: 2000,
+        showConfirmButton: false
+    }).then(() => {
+        window.location.href = "<?= $redirect ?>";
+    });
+</script>
 </body>
 </html>
