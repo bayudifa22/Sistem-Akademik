@@ -126,9 +126,10 @@ if (isset($_POST['register'])) {
             <div class="form-group">
                 <label for="level">Level</label>
                 <select class="form-control" id="level" name="level" required>
+                    <option value="">Pilih Level</option>
+                    <option value="admin">Admin</option>
                     <option value="mahasiswa">Mahasiswa</option>
                     <option value="dosen">Dosen</option>
-                    <option value="admin">Admin</option>
                 </select>
             </div>
             <button type="submit" name="register" class="btn btn-success btn-block">Register</button>
