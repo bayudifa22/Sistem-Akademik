@@ -116,7 +116,7 @@ if (isset($_GET['hapus'])) {
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th width="5%" class="text-center"><i class="fa-solid fa-hashtag"></i> No</th>
+                        <th width="15%" class="text-center"><i class="fa-solid fa-hashtag"></i> No</th>
                         <th width="20%" class="text-center"><i class="fa-solid fa-id-card"></i> NIM</th>
                         <th width="30%" class="text-center"><i class="fa-solid fa-code"></i> Kode Matakuliah</th>
                         <th width="15%" class="text-center"><i class="fa-solid fa-star"></i> Nilai</th>
