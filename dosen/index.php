@@ -19,7 +19,7 @@ include '../database/koneksi.php';
     <title>Dashboard</title>
     <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
+    <!-- <style>
         body {
             display: flex;
             background-color: #f8f9fa;
@@ -92,11 +92,11 @@ include '../database/koneksi.php';
         .nav-item.logout:hover {
             background-color: #c82333;
         }
-    </style>
+    </style> -->
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         <div class="sidebar-brand">
             <i class="fa-solid fa-graduation-cap"></i> Sistem Akademik
         </div>
@@ -120,7 +120,7 @@ include '../database/koneksi.php';
                 <i class="fa-solid fa-right-from-bracket"></i> Logout
             </a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Main Content -->
     <div class="main-content">
